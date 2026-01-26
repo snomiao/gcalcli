@@ -305,7 +305,7 @@ def main():
             gcal.AddEvent(parsed_args.title, parsed_args.where, estart, eend,
                           parsed_args.description, parsed_args.who,
                           parsed_args.reminders, parsed_args.event_color,
-                          parsed_args.transparency)
+                          parsed_args.availability)
 
         elif parsed_args.command == 'search':
             gcal.TextQuery(

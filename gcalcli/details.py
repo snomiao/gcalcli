@@ -356,10 +356,15 @@ class ID(SimpleSingleFieldHandler):
     fieldnames = ['id']
 
 
-class Transparency(SimpleSingleFieldHandler):
-    """Handler for event transparency (free/busy)."""
+class Availability(SimpleSingleFieldHandler):
+    """Handler for event availability (free/busy)."""
 
     fieldnames = ['transparency']
+
+    @classmethod
+    def _get(cls, event):
+        val = event.get(cls.fieldnames[0], 'opaque')
+        return 'free' if val == 'transparent' else 'busy'
 
 
 class Action(SingleFieldHandler):
@@ -383,7 +388,7 @@ HANDLERS = OrderedDict([('id', ID),
                         ('calendar', Calendar),
                         ('email', Email),
                         ('attendees', Attendees),
-                        ('transparency', Transparency),
+                        ('availability', Availability),
                         ('action', Action)])
 HANDLERS_READONLY = {Url, Calendar}
 

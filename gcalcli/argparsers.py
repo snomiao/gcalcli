@@ -610,10 +610,10 @@ def get_argument_parser():
         'peacock, graphite, blueberry, basil, tomato.',
     )
     add.add_argument(
-        '--transparency',
-        default='opaque',
-        choices=['opaque', 'transparent'],
-        help='Event transparency (free/busy status). Default is opaque (busy).',
+        '--availability',
+        default='busy',
+        choices=['free', 'busy'],
+        help='Event availability (free/busy status). Default is busy.',
     )
     add.add_argument('--title', default=None, type=str, help='Event title')
     add.add_argument(
