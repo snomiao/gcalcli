@@ -356,6 +356,12 @@ class ID(SimpleSingleFieldHandler):
     fieldnames = ['id']
 
 
+class Transparency(SimpleSingleFieldHandler):
+    """Handler for event transparency (free/busy)."""
+
+    fieldnames = ['transparency']
+
+
 class Action(SingleFieldHandler):
     """Handler specifying event processing during an update."""
 
@@ -377,6 +383,7 @@ HANDLERS = OrderedDict([('id', ID),
                         ('calendar', Calendar),
                         ('email', Email),
                         ('attendees', Attendees),
+                        ('transparency', Transparency),
                         ('action', Action)])
 HANDLERS_READONLY = {Url, Calendar}
 
