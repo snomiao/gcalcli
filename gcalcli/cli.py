@@ -40,6 +40,8 @@ import sys
 from argparse import ArgumentTypeError
 from collections import namedtuple
 
+import shopen
+
 from . import config, env, utils
 from .argparsers import get_argument_parser, handle_unparsed
 from .exceptions import GcalcliError
@@ -347,7 +349,7 @@ def main():
                     config_filepath.parent.mkdir(parents=True, exist_ok=True)
                     with open(config_filepath, 'w') as f:
                         f.write(EMPTY_CONFIG_TOML)
-                utils.launch_editor(config_filepath)
+                shopen.open(config_filepath, 'edit')
 
         elif parsed_args.command == 'util':
             if parsed_args.subcommand == 'config-schema':
