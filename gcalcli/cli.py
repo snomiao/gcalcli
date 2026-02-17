@@ -48,7 +48,7 @@ from dotenv import load_dotenv
 #   .env.local  (highest — machine/user-specific, gitignored)
 #   .env        (base defaults, may be committed)
 # Searches cwd first, then home directory.
-for _base in (pathlib.Path.cwd(), pathlib.Path.home()):
+for _base in (pathlib.Path.cwd(), pathlib.Path.home() / '.gcalcli'):
     load_dotenv(_base / '.env.local', override=False)
     load_dotenv(_base / '.env', override=False)
 
