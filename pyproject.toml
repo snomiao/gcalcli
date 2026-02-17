@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gcalcli"
+name = "snomiao-gcalcli"
 dynamic = ["version"]
 requires-python = ">= 3.10"
 readme = "README.md"
@@ -16,6 +16,7 @@ authors = [
 maintainers = [
   { name = "David Barnett" },
   { name = "Martin Dengler" },
+  { name = "snomiao", email = "snomiao@gmail.com" },
 ]
 description = "Google Calendar Command Line Interface"
 classifiers = [
@@ -41,9 +42,9 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/insanum/gcalcli"
-Issues = "https://github.com/insanum/gcalcli/issues"
-Changelog = "https://github.com/insanum/gcalcli/blob/HEAD/ChangeLog"
+Repository = "https://github.com/snomiao/gcalcli"
+Issues = "https://github.com/snomiao/gcalcli/issues"
+Changelog = "https://github.com/snomiao/gcalcli/blob/HEAD/ChangeLog"
 
 [project.optional-dependencies]
 dev = [
