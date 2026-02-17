@@ -282,11 +282,13 @@ class GoogleCalendarInterface:
                     'that you should have set up for yourself in Google '
                     'dev console.\n'
                 )
-            client_id = self.options.get('client_id')
+            client_id = (self.options.get('client_id')
+                         or os.environ.get('GOOGLE_CLIENT_ID'))
             if client_id is None:
                 self.printer.msg('Client ID: ', 'magenta')
                 client_id = input()
-            client_secret = self.options.get('client_secret')
+            client_secret = (self.options.get('client_secret')
+                             or os.environ.get('GOOGLE_CLIENT_SECRET'))
             if client_secret is None:
                 self.printer.msg('Client Secret: ', 'magenta')
                 client_secret = input()

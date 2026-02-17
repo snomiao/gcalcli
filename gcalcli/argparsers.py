@@ -18,11 +18,15 @@ from .details import DETAILS
 from .printer import valid_color_name
 
 PROGRAM_OPTIONS = {
-    '--client-id': {'default': None, 'type': str, 'help': 'API client_id'},
+    '--client-id': {
+        'default': None,
+        'type': str,
+        'help': 'API client_id (env: GOOGLE_CLIENT_ID)',
+    },
     '--client-secret': {
         'default': None,
         'type': str,
-        'help': 'API client_secret',
+        'help': 'API client_secret (env: GOOGLE_CLIENT_SECRET)',
     },
     '--service-account': {
         'default': None,

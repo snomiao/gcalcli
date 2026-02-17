@@ -9,6 +9,8 @@ htmlcov/
 
 /gcalcli/_version.py
 gcalcli.egg-info
+snomiao_gcalcli.egg-info
+.env.local
 
 .coverage
 .pytest_cache?

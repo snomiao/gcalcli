@@ -42,6 +42,15 @@ from argparse import ArgumentTypeError
 from collections import namedtuple
 
 import shopen
+from dotenv import load_dotenv
+
+# Load env files without overriding already-set vars (Next.js-style priority):
+#   .env.local  (highest — machine/user-specific, gitignored)
+#   .env        (base defaults, may be committed)
+# Searches cwd first, then home directory.
+for _base in (pathlib.Path.cwd(), pathlib.Path.home()):
+    load_dotenv(_base / '.env.local', override=False)
+    load_dotenv(_base / '.env', override=False)
 
 from . import config, env, utils
 from .argparsers import get_argument_parser, handle_unparsed
