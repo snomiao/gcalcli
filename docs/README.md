@@ -2,7 +2,9 @@
 
 Google Calendar Command Line Interface
 
-[![Build Status](https://github.com/insanum/gcalcli/actions/workflows/tests.yml/badge.svg)](https://github.com/insanum/gcalcli/actions/workflows/tests.yml)
+> **Note:** This is an actively maintained fork of [insanum/gcalcli](https://github.com/insanum/gcalcli), which appears to be no longer actively maintained. This fork merges community PRs and applies fixes. Install from this fork: `pip install git+https://github.com/snomiao/gcalcli.git`
+
+[![Build Status](https://github.com/snomiao/gcalcli/actions/workflows/tests.yml/badge.svg)](https://github.com/snomiao/gcalcli/actions/workflows/tests.yml)
 
 gcalcli is a Python application that allows you to access your Google
 Calendar(s) from a command line. It's easy to get your agenda, search for
