@@ -48,47 +48,28 @@ pyproject.toml, and a love for the command line!
 
 ## Installation
 
-Check your OS distribution for packages.
+> **This fork is not yet published to PyPI.** OS packages (apt, Homebrew, Nix) and
+> the `gcalcli` package on PyPI all point to the original unmaintained upstream.
+> Install from this fork directly until a PyPI release is available.
 
-If your OS doesn't have the latest released version you can install using pip
-(or pipx).
-
-### Install on Linux
-
-Several Linux distros have packages available. A few popular ones...
-
-* Debian/Ubuntu: `sudo apt install gcalcli`
-* Void Linux: `xbps-install gcalcli`
-
-### Install using [Nix](https://nixos.org/nix/)
+### Install from this fork (recommended)
 
 ```shell
-nix-env -i gcalcli
+pip install git+https://github.com/snomiao/gcalcli.git
+# with ICS import support:
+pip install "git+https://github.com/snomiao/gcalcli.git#egg=gcalcli[vobject]"
 ```
 
-### Install using [Homebrew](https://brew.sh/) (MacOS)
+Or with [pipx](https://pypa.github.io/pipx/) (isolated environment, recommended for CLI tools):
 
 ```shell
-brew install gcalcli
-```
-
-### Install from PyPI
-
-```shell
-pip install gcalcli[vobject]
-# OR: pipx install gcalcli[vobject]
-```
-
-If you don't need the `import` command you can install without extras:
-
-```shell
-pip install gcalcli
+pipx install git+https://github.com/snomiao/gcalcli.git
 ```
 
 ### Install from source
 
 ```sh
-git clone https://github.com/insanum/gcalcli.git
+git clone https://github.com/snomiao/gcalcli.git
 cd gcalcli
 pip install .[vobject]
 ```
