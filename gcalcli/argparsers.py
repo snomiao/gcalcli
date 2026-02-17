@@ -715,7 +715,7 @@ def get_argument_parser():
     default_cmd = 'notify-send -u critical -i appointment-soon -a gcalcli %s'
     remind = sub.add_parser(
         'remind',
-        parents=[calendars_parser],
+        parents=[calendars_parser, output_parser],
         help='execute command if event occurs within <mins> time',
         description='Execute <cmd> if event occurs within <mins>; the %s '
         'in <command> is replaced with event start time and title text.'
