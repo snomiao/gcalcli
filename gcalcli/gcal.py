@@ -1555,6 +1555,9 @@ class GoogleCalendarInterface:
             if event['s'] < self.now:
                 continue
 
+            if self.options['ignore_declined'] and self._DeclinedEvent(event):
+                continue
+
             # not sure if 'reminders' always in event
             if use_reminders and 'reminders' in event \
                     and 'overrides' in event['reminders']:
