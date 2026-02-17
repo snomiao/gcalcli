@@ -48,22 +48,21 @@ pyproject.toml, and a love for the command line!
 
 ## Installation
 
-> **This fork is not yet published to PyPI.** OS packages (apt, Homebrew, Nix) and
-> the `gcalcli` package on PyPI all point to the original unmaintained upstream.
-> Install from this fork directly until a PyPI release is available.
+> **Note:** The `gcalcli` package on PyPI and OS packages (apt, Homebrew, Nix) point to
+> the original unmaintained upstream. Install this fork from PyPI as `snomiao-gcalcli`.
 
-### Install from this fork (recommended)
+### Install from PyPI (recommended)
 
 ```shell
-pip install git+https://github.com/snomiao/gcalcli.git
+pip install snomiao-gcalcli
 # with ICS import support:
-pip install "git+https://github.com/snomiao/gcalcli.git#egg=gcalcli[vobject]"
+pip install "snomiao-gcalcli[vobject]"
 ```
 
 Or with [pipx](https://pypa.github.io/pipx/) (isolated environment, recommended for CLI tools):
 
 ```shell
-pipx install git+https://github.com/snomiao/gcalcli.git
+pipx install snomiao-gcalcli
 ```
 
 ### Install from source
